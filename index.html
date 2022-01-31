@@ -10,10 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Code&Code</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Code&Code</a>
+        <a class="navbar-brand" href="/index.html">Code&Code</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,10 +25,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about.html">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -44,7 +48,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact us</a>
+                    <a class="nav-link" href="/contact.html">Contact us</a>
                 </li>
                 <!-- <li class="nav-item">
                         <a class="nav-link disabled">Disabled</a>
@@ -55,9 +59,109 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
+            <div class="mx-2">
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                <button class="btn btn-outline-light" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">Signup</button>
+            </div>
         </div>
     </div>
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                        data-sb-validations="required, email" />
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.
+                    </div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not
+                        valid.
+                    </div>
+                </div>
+                <div class="mb-3">
+
+                    <input class="form-control" id="password" type="password" placeholder="Enter Password"
+                        data-sb-validations="required, password" />
+                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+
+
+                </div>
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Remember me</label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+
+                    <input class="form-control" id="name" type="text" placeholder="Enter the Name"
+                        data-sb-validations="required, name" />
+                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+
+
+                </div>
+                <div class="mb-3">
+
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                        data-sb-validations="required, email" />
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.
+                    </div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not
+                        valid.
+                    </div>
+                </div>
+                <div class="mb-3">
+
+                    <input class="form-control" id="password" type="password" placeholder="Enter Password"
+                        data-sb-validations="required, password" />
+                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+
+
+                </div>
+                <div class="mb-3">
+
+                    <input class="form-control" id="password" type="password" placeholder="Confirm Password"
+                        data-sb-validations="required, password" />
+                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Signup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <marquee behavior="" direction="right"> <strong>Welcome!</strong>&nbsp;&nbsp; Best place for coding Blogs.</marquee>
@@ -117,7 +221,8 @@
                     <div class="mb-1 text-muted">Nov 12</div>
                     <p class="card-text mb-auto">Get a layperson’s explanation of “technical debt” and the implications
                         for business leaders in this brief interview... <br></p>
-                    <a href="https://www.pluralsight.com/blog/it-ops/technical-debt-poses-cybersecurity-risk" class="stretched-link" style="text-decoration: none;font-weight: bold;">Continue
+                    <a href="https://www.pluralsight.com/blog/it-ops/technical-debt-poses-cybersecurity-risk"
+                        class="stretched-link" style="text-decoration: none;font-weight: bold;">Continue
                         reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
@@ -135,8 +240,10 @@
                     </strong>
                     <h3 class="mb-0">The ultimate guide to tech certifications</h3>
                     <div class="mb-1 text-muted">Nov 11</div>
-                    <p class="mb-auto">With coverage for the top cloud, IT, security and project management certifications around the world,...</p>
-                    <a href="https://www.pluralsight.com/blog/cloud/certifications-guide" class="stretched-link" style="text-decoration: none; font-weight: bold;">Continue reading</a>
+                    <p class="mb-auto">With coverage for the top cloud, IT, security and project management
+                        certifications around the world,...</p>
+                    <a href="https://www.pluralsight.com/blog/cloud/certifications-guide" class="stretched-link"
+                        style="text-decoration: none; font-weight: bold;">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <img class="bd-placeholder-img" width="200" height="250" src="Media/blog2.png" alt="">
@@ -150,8 +257,10 @@
                     </strong>
                     <h3 class="mb-0">How Coding Affects Thinking!</h3>
                     <div class="mb-1 text-muted">Nov 11</div>
-                    <p class="mb-auto">Coding requires you to learn multiple languages that are designed to build instructions a machine can read...</p>
-                    <a href="https://www.thatcompany.com/how-coding-affects-thinking#:~:text=It%20Helps%20us%20improve%20our,connections%2C%20while%20strengthening%20existing%20ones." class="stretched-link" style="text-decoration: none; font-weight: bold;">Continue reading</a>
+                    <p class="mb-auto">Coding requires you to learn multiple languages that are designed to build
+                        instructions a machine can read...</p>
+                    <a href="https://www.thatcompany.com/how-coding-affects-thinking#:~:text=It%20Helps%20us%20improve%20our,connections%2C%20while%20strengthening%20existing%20ones."
+                        class="stretched-link" style="text-decoration: none; font-weight: bold;">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <img class="bd-placeholder-img" width="200" height="250" src="Media/blog4.png" alt="">
@@ -165,8 +274,10 @@
                     </strong>
                     <h3 class="mb-0">Interpreting A/B test results: false negative</h3>
                     <div class="mb-1 text-muted">Nov 21</div>
-                    <p class="mb-auto">This is the fourth post in a multi-part series on how Netflix uses A/B tests to inform decisions and continuously...</p>
-                    <a href="https://netflixtechblog.com/interpreting-a-b-test-results-false-negatives-and-power-6943995cf3a8" class="stretched-link" style="text-decoration: none; font-weight: bold;">Continue reading</a>
+                    <p class="mb-auto">This is the fourth post in a multi-part series on how Netflix uses A/B tests to
+                        inform decisions and continuously...</p>
+                    <a href="https://netflixtechblog.com/interpreting-a-b-test-results-false-negatives-and-power-6943995cf3a8"
+                        class="stretched-link" style="text-decoration: none; font-weight: bold;">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <img class="bd-placeholder-img" width="200" height="250" src="Media/blog3.png" alt="">
@@ -178,21 +289,25 @@
 
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="text-muted">© 2022 Code&Code, Inc</span>
-      </div>
-  
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" style="font-size: 30px;"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-github" style="font-size: 30px;"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" style="font-size: 30px;"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-rocket" style="font-size: 30px;"></i></a></li>
-    </ul>
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <strong>Code&Code</strong>
+            </a>
+            <span class="text-muted">© 2022 Code&Code.com</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" style="font-size: 30px;"></i></a>
+            </li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-github" style="font-size: 30px;"></i></a>
+            </li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" style="font-size: 30px;"></i></a>
+            </li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-rocket" style="font-size: 30px;"></i></a>
+            </li>
+        </ul>
     </footer>
-  </div>
+</div>
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
